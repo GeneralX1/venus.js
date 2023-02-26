@@ -6,3 +6,15 @@ patch:
   'npm:mime:20170907':
     - phantomjs > request > mime:
         patched: '2023-02-26T20:56:18.469Z'
+  'npm:hoek:20180212':
+    - phantomjs > request > hawk > hoek:
+        patched: '2023-02-26T20:56:41.722Z'
+    - phantomjs > request > hawk > boom > hoek:
+        patched: '2023-02-26T20:56:41.722Z'
+    - phantomjs > request > hawk > sntp > hoek:
+        patched: '2023-02-26T20:56:41.722Z'
+    - phantomjs > request > hawk > cryptiles > boom > hoek:
+        patched: '2023-02-26T20:56:41.722Z'
+  'npm:tough-cookie:20170905':
+    - phantomjs > request > tough-cookie:
+        patched: '2023-02-26T20:56:41.722Z'
