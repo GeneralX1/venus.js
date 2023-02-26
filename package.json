@@ -29,30 +29,31 @@
     "commander": "1.1.1",
     "consolidate": "0.3.0",
     "deferred": "0.6.5",
-    "dustjs-linkedin": "0.6.0",
+    "dustjs-linkedin": "3.0.0",
     "expect.js": "~0.2.0",
-    "express": "3.6.0",
+    "express": "4.16.0",
     "flavored-path": "0.0.8",
     "fs-tools": "0.2.2",
     "i18n": "0.3.5",
-    "istanbul": "0.3.4",
-    "json5": "0.1.0",
+    "istanbul": "0.4.5",
+    "json5": "1.0.2",
     "mkdirp": "0.3.5",
     "graceful-fs": "4.1.11",
-    "phantomjs": "1.9.7-8",
+    "phantomjs": "1.9.20",
     "portscanner": "0.1.3",
     "rmrf": "1.0.2",
     "sauce-connect-launcher": "0.1.3",
     "saucelabs": "0.0.9",
     "selenium-webdriver": "2.35.1",
-    "socket.io": "0.8.7",
-    "socket.io-client": "0.9.6",
-    "underscore": "1.3.3",
+    "socket.io": "2.4.0",
+    "socket.io-client": "1.0.1",
+    "underscore": "1.12.1",
     "underscore.string": "2.2.0rc",
     "useragent-parser": "0.1.1",
     "when": "2.5.1",
-    "winston": "0.6.1",
-    "wrench": "1.4.3"
+    "winston": "0.8.0",
+    "wrench": "1.4.3",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "grunt": "0.4.5",
@@ -67,6 +68,9 @@
   "preferGlobal": true,
   "scripts": {
     "test": "./node_modules/.bin/mocha test/unit/node/test_suite.js && ./bin/venus run -t test/unit/client -n",
-    "int-test": "./node_modules/.bin/mocha test/integration"
-  }
+    "int-test": "./node_modules/.bin/mocha test/integration",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
